@@ -2,8 +2,8 @@
 #define RELASI_H_INCLUDED
 
 #include <iostream>
-#include "Eventlib.h"
-#include "Sponsorlib.h"
+#include "Event.h"
+#include "Sponsor.h"
 
 #define info(P) P->info
 #define next(P) P->next
