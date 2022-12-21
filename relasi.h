@@ -21,7 +21,6 @@ struct relasi {
 };
 
 typedef struct elmRelasi *adr_Relasi;
-
 typedef relasi infotype;
 
 struct elmRelasi {
