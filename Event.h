@@ -1,42 +1,46 @@
+#ifndef EVENTLIB_H_INCLUDED
+#define EVENTLIB_H_INCLUDED
+
 #include <iostream>
-#include "Eventlib.h"
-#include "Sponsorlib.h"
 
 #define info(P) P->info
 #define next(P) P->next
-#define prev(P) P->prev
-#define Event(P) P->Event
-#define Sponsor(P) P->Sponsor
 #define first(L) L.first
+#define last(L) L.last
 #define nil NULL
 
 using namespace std;
 
-struct relasi {
-    string dukungan;
-    int budgetDukungan;
+struct event {
+    string namaEvent;
+    int butuhBudget;
+    int budgetKurang;
+    int budgetLebih;
+    int counter;
 };
 
-typedef struct elmRelasi *adr_Relasi;
+typedef event infotype;
 
-typedef relasi infotype;
+typedef struct elmListEvent *adr_Event;
 
-struct elmRelasi {
+struct elmListEvent {
     infotype info;
-    adr_Relasi next;
-    adr_Relasi prev;
-    adr_Sponsor Sponsor;
-    adr_Event Event;
+    adr_Event next;
 };
 
-struct ListRelasi {
-    adr_Relasi first;
+struct ListEvent {
+    adr_Event first;
+    adr_Event last;
 };
 
-void createListRelasi(ListRelasi &L,);
-adr_Relasi newRelasi(adr_Event E, adr_Sponsor S, infotype x);
-void insertLastRelasi(ListRelasi &L, adr_Relasi P);
-void deleteFirstRelasi(ListRelasi &L, adr_Relasi &P);
-adr_Relasi cariRelasi(ListRelasi L, adr_Event E, adr_Sponsor S);
-void showRelasi(ListRelasi L);
-void hapusRelasi(ListRelasi &L, adr_Relasi &P);
+void createListEvent(ListEvent &L);
+adr_Event newEvent(infotype x);
+bool isEmptyListEvent(ListEvent L);
+void insertLastEvent(ListEvent &L, adr_Event P);
+void deleteFirstEvent(ListEvent &L, adr_Event &P);
+adr_Event cariEvent(ListEvent L, string namaEvent);
+void showEvent(ListEvent &L);
+void tambahEvent(ListEvent &L);
+void hapusEvent(ListEvent &L, string namaEvent, adr_Event &P);
+
+#endif // EVENTLIB_H_INCLUDED
