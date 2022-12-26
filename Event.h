@@ -36,6 +36,7 @@ struct ListEvent {
 void createListEvent(ListEvent &L);
 adr_Event newEvent(infotype x);
 bool isEmptyListEvent(ListEvent L);
+void insertFirstEvent(ListEvent &L, adr_Event P);
 void insertLastEvent(ListEvent &L, adr_Event P);
 void deleteFirstEvent(ListEvent &L, adr_Event &P);
 adr_Event cariEvent(ListEvent L, string namaEvent);
