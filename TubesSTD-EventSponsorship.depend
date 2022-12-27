@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1671623987 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\main.cpp
+1672137344 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\main.cpp
 	<iostream>
-
-1672132220 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\event.cpp
 	"Event.h"
 
-1672131284 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\event.h
+1672138564 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\event.cpp
+	"Event.h"
+
+1672136271 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\event.h
 	<iostream>
 	<fstream>
 	<cstdlib>

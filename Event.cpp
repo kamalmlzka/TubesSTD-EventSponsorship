@@ -112,22 +112,90 @@ void deleteLastEvent(ListEvent &L, adr_Event &P)
 
 void deleteAfterEvent(ListEvent &L, adr_Event &P, adr_Event Prec)
 {
-
+    if (isEmptyListEvent(L) == true) {
+        cout << "Event Kosong" << endl;
+    } else if (next(first(L)) == first(L)) {
+        deleteFirstEvent(L, P);
+    } else {
+        if (Prec == last(L)) {
+            P = next(Prec);
+            deleteFirstEvent(L, P);
+        } else if (next(Prec) == last(L)) {
+            P = next(Prec);
+            deleteLastEvent(L, P);
+        } else {
+            P = next(Prec);
+            next(Prec) = next(P);
+            next(P) = nil;
+        }
+    }
 }
 
 adr_Event cariEvent(ListEvent L, string namaEvent)
 {
+    adr_Event P, Q;
+    bool found = false;
 
+    if (isEmptyListEvent(L) == true) {
+        cout << "Event Kosong" << endl;
+    } else {
+        P = first(L);
+        while (P != nil) {
+            if (info(P).namaEvent == namaEvent) {
+                found = true;
+                Q = P;
+            }
+            P = next(P);
+        }
+    }
+    if (found == true) {
+        return Q;
+    } else if (found == false) {
+        return nil;
+    }
 }
 
 void showEvent(ListEvent &L)
 {
+    adr_Event P = first(L);
+    int i = 1;
 
+    if (isEmptyListEvent(L) == true) {
+        cout << "Event Kosong" << endl;
+    } else {
+        while (P != nil) {
+            cout << " " << i++;
+            cout << " " << info(P).namaEvent;
+            cout << " " << info(P).butuhBudget;
+            cout << " " << info(P).budgetKurang;
+            cout << " " << info(P).budgetLebih << endl;
+        }
+    }
 }
 
 void tambahEvent(ListEvent &L)
 {
+    int menu = 0;
+    event eventBaru;
 
+    while (menu != 2) {
+        do {
+//            system("CLS");
+            cin.ignore();
+            cout << "Nama Event           : "; getline(cin, eventBaru.namaEvent);
+            cout << "Dana yang dibutuhkan : "; cin >> eventBaru.butuhBudget;
+            eventBaru.budgetKurang = eventBaru.butuhBudget;
+            eventBaru.budgetLebih = 0;
+            eventBaru.counter = 0;
+
+            adr_Event P = newEvent(eventBaru);
+//            insertFirstEvent(L, P);
+
+            cout << "1. Tambah Data Event\n";
+            cout << "2. Kembali\n";
+            cout << "Pilih Menu: "; cin >> menu;
+        } while (menu == 1);
+    }
 }
 
 void hapusEvent(ListEvent &L, string namaEvent, adr_Event &P)
