@@ -36,6 +36,7 @@
 		<Unit filename="Sponsor.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="relasi.h" />
+		<Unit filename="Event.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
