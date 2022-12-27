@@ -2,6 +2,10 @@
 #define EVENTLIB_H_INCLUDED
 
 #include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <iomanip>
+#include <string>
 
 #define info(P) P->info
 #define next(P) P->next
@@ -35,10 +39,14 @@ struct ListEvent {
 
 void createListEvent(ListEvent &L);
 adr_Event newEvent(infotype x);
+void delEvent(adr_Event &P);
 bool isEmptyListEvent(ListEvent L);
 void insertFirstEvent(ListEvent &L, adr_Event P);
 void insertLastEvent(ListEvent &L, adr_Event P);
+void inserAfterEvent(ListEvent &L, adr_Event P, adr_Event Prec);
 void deleteFirstEvent(ListEvent &L, adr_Event &P);
+void deleteLastEvent(ListEvent &L, adr_Event &P);
+void deleteAfterEvent(ListEvent &L, adr_Event &P, adr_Event Prec);
 adr_Event cariEvent(ListEvent L, string namaEvent);
 void showEvent(ListEvent &L);
 void tambahEvent(ListEvent &L);
