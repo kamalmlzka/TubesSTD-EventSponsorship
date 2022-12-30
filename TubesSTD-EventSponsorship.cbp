@@ -32,11 +32,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Event.cpp" />
 		<Unit filename="Event.h" />
+		<Unit filename="Sponsor.cpp" />
 		<Unit filename="Sponsor.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="relasi.cpp" />
 		<Unit filename="relasi.h" />
-		<Unit filename="Event.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

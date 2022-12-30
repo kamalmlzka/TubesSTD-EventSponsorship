@@ -23,12 +23,11 @@ struct event {
     int counter;
 };
 
-typedef event infotype;
-
+typedef event infotypeE;
 typedef struct elmListEvent *adr_Event;
 
 struct elmListEvent {
-    infotype info;
+    infotypeE info;
     adr_Event next;
 };
 
@@ -38,7 +37,7 @@ struct ListEvent {
 };
 
 void createListEvent(ListEvent &L);
-adr_Event newEvent(infotype x);
+adr_Event newEvent(infotypeE x);
 void delEvent(adr_Event &P);
 bool isEmptyListEvent(ListEvent L);
 void insertFirstEvent(ListEvent &L, adr_Event P);

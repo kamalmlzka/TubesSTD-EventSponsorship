@@ -6,7 +6,7 @@ void createListEvent(ListEvent &L)
     last(L) = nil;
 }
 
-adr_Event newEvent(infotype x)
+adr_Event newEvent(infotypeE x)
 {
     adr_Event P;
 
@@ -189,9 +189,9 @@ void tambahEvent(ListEvent &L)
             eventBaru.counter = 0;
 
             adr_Event P = newEvent(eventBaru);
-//            insertFirstEvent(L, P);
+            insertFirstEvent(L, P);
 
-            cout << "1. Tambah Data Event\n";
+            cout << "1. Tambah Data Event Lagi\n";
             cout << "2. Kembali\n";
             cout << "Pilih Menu: "; cin >> menu;
         } while (menu == 1);
@@ -200,5 +200,34 @@ void tambahEvent(ListEvent &L)
 
 void hapusEvent(ListEvent &L, string namaEvent, adr_Event &P)
 {
+    adr_Event Q;
+    bool found = false;
 
+    if (P == nil) {
+        cout << "Data tidak ditemukan\n";
+    } else {
+        if (P == first(L)) {
+            deleteFirstEvent(L, P);
+            delEvent(P);
+        } else if (P == last(L)) {
+            deleteLastEvent(L, P);
+            delEvent(P);
+        } else if (first(L) == last(L)) {
+            deleteFirstEvent(L, P);
+            delEvent(P);
+        } else {
+            adr_Event Prec;
+            Q = first(L);
+
+            do {
+                if (next(Q) == P) {
+                    found = true;
+                    Prec = Q;
+                }
+                Q = next(Q);
+            } while(next(Q) != first(L));
+            deleteAfterEvent(L, P, Prec);
+            delEvent(P);
+        }
+    }
 }

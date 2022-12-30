@@ -3,13 +3,31 @@
 	<iostream>
 	"Event.h"
 
-1672138564 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\event.cpp
+1672343447 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\event.cpp
 	"Event.h"
 
-1672136271 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\event.h
+1672343530 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\event.h
 	<iostream>
 	<fstream>
 	<cstdlib>
 	<iomanip>
 	<string>
+
+1672343451 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\sponsor.cpp
+	"Sponsor.h"
+
+1672343437 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\sponsor.h
+	<iostream>
+	<string.h>
+	<fstream>
+	<cstdlib>
+	<iomanip>
+
+1672343437 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\relasi.cpp
+	"relasi.h"
+
+1672343530 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\relasi.h
+	"Event.h"
+	"Sponsor.h"
+	<iostream>
 

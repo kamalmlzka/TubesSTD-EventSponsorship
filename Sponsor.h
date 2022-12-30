@@ -1,7 +1,11 @@
-#ifndef SPONSORLIB_H_INCLUDED
-#define SPONSORLIB_H_INCLUDED
+#ifndef SPONSOR_H_INCLUDED
+#define SPONSOR_H_INCLUDED
 
 #include <iostream>
+#include <string.h>
+#include <fstream>
+#include <cstdlib>
+#include <iomanip>
 
 #define info(P) P->info
 #define next(P) P->next
@@ -12,16 +16,15 @@ using namespace std;
 
 struct sponsor {
     string namaSponsor;
-    int budget, sisaBudget;
+    long budget, sisaBudget;
     int counter;
 };
 
-typedef sponsor infotype;
-
+typedef sponsor infotypeS;
 typedef struct elmListSponsor *adr_Sponsor;
 
 struct elmListSponsor {
-    infotype info;
+    infotypeS info;
     adr_Sponsor next;
 };
 
@@ -30,12 +33,17 @@ struct ListSponsor {
 };
 
 void createListSponsor(ListSponsor &L);
-adr_Sponsor newSponsor(infotype x);
+adr_Sponsor newSponsor(infotypeS x);
+void delSponsor(adr_Sponsor &P);
+void insertFirstSponsor(ListSponsor &L, adr_Sponsor P);
 void insertLastSponsor(ListSponsor &L, adr_Sponsor P);
+void inserAfterSponsor(ListSponsor &L, adr_Sponsor P, adr_Sponsor Prec);
 void deleteFirstSponsor(ListSponsor &L, adr_Sponsor P);
+void deleteLastSponsor(ListSponsor &L, adr_Sponsor P);
+void deleteAfterSponsor(ListSponsor &L, adr_Sponsor P, adr_Sponsor Prec);
 adr_Sponsor cariSponsor(ListSponsor L, string namaSponsor);
 void showSponsor(ListSponsor &L);
 void tambahSponsor(ListSponsor &L);
 void hapusSponsor(ListSponsor &L, string namaSponsor, adr_Sponsor &P);
 
-#endif // SPONSORLIB_H_INCLUDED
+#endif // SPONSOR_H_INCLUDED
