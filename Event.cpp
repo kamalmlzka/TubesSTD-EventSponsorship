@@ -141,13 +141,13 @@ adr_Event cariEvent(ListEvent L, string namaEvent)
         cout << "Event Kosong" << endl;
     } else {
         P = first(L);
-        while (P != nil) {
+        do{
             if (info(P).namaEvent == namaEvent) {
                 found = true;
                 Q = P;
             }
             P = next(P);
-        }
+        } while (P != first(L));
     }
     if (found == true) {
         return Q;
@@ -162,14 +162,16 @@ void showEvent(ListEvent &L)
     int i = 1;
 
     if (isEmptyListEvent(L) == true) {
-        cout << "                      Event Kosong" << endl;
+        cout<<" "<<setiosflags(ios::right)<<setw(12)<< "nil";
+        cout<<" "<<setiosflags(ios::right)<<setw(21)<< "Event Kosong";
     } else {
         do {
-            cout << "           " << i++;
-            cout << "           " << info(P).namaEvent;
-            cout << "           " << info(P).butuhBudget;
-            cout << "           " << info(P).budgetKurang;
-            cout << "           " << info(P).budgetLebih << endl;
+            cout<<" "<<setiosflags(ios::right)<<setw(7);
+            cout<<" "<<setiosflags(ios::left)<<setw(4)<< i++;
+            cout<<" "<<setiosflags(ios::left)<<setw(20)<< info(P).namaEvent;
+            cout<<" "<<setiosflags(ios::left)<<setw(24)<< info(P).butuhBudget;
+            cout<<" "<<setiosflags(ios::left)<<setw(25)<< info(P).budgetKurang;
+            cout<<" "<<setiosflags(ios::left)<<setw(27)<< info(P).budgetLebih << endl;
             P = next(P);
         } while(P != first(L));
     }
@@ -182,7 +184,7 @@ void tambahEvent(ListEvent &L)
 
     while (menu != 2) {
         do {
-//            system("CLS");
+            system("CLS");
             cin.ignore();
             cout << "Nama Event           : "; getline(cin, eventBaru.namaEvent);
             cout << "Dana yang dibutuhkan : "; cin >> eventBaru.butuhBudget;
@@ -193,6 +195,7 @@ void tambahEvent(ListEvent &L)
             adr_Event P = newEvent(eventBaru);
             insertFirstEvent(L, P);
 
+            cout << endl;
             cout << "1. Tambah Data Event Lagi\n";
             cout << "2. Kembali\n";
             cout << "Pilih Menu: "; cin >> menu;

@@ -34,62 +34,63 @@ void menuEvent(ListEvent &LE, ListRelasi &LR)
     while (menu != '3') {
         do {
             system("cls");
-            spasi(120,"=====================================\n");
-            spasi(122,"DAFTAR EVENT\n");
-            spasi(120,"=====================================\n");
-            cout<<endl;
-            spasi(25,"No. ");
-            spasi(30,"Nama Event ");
-            spasi(35,"Dana dibutuhkan ");
-            spasi(40,"Dana Kurang ");
-            spasi(45,"Dana Lebih ");
-            cout<<endl;
+            spasi(120, "=====================================\n");
+            spasi(122, "DAFTAR EVENT\n");
+            spasi(120, "=====================================\n");
+            cout << endl;
+            spasi(25, "No. ");
+            spasi(30, "Nama Event ");
+            spasi(35, "Dana dibutuhkan ");
+            spasi(40, "Dana Kurang ");
+            spasi(45, "Dana Lebih ");
+            cout << endl;
             showEvent(LE);
-            cout<<endl;
-            cout<<endl;
-            spasi(40,"1. Tambah Event \n");
-            spasi(38,"2. Hapus Event \n");
-            spasi(34,"3. Kembali \n");
-            cout<<endl;
-            spasi(34,"Pilih Menu : ");
-                cin>>menu;
-                if(menu == '1'){
+            cout << endl;
+            cout << endl;
+            spasi(40, "1. Tambah Event \n");
+            spasi(38, "2. Hapus Event \n");
+            spasi(34, "3. Kembali \n");
+            cout << endl;
+            spasi(34, "Pilih Menu : ");
+                cin >> menu;
+                if (menu == '1') {
                     system("CLS");
                     tambahEvent(LE);
-                }else if(menu == '2'){
+                } else if (menu == '2') {
                     system("CLS");
                     string namaEvent;
                     char pil;
-                    cout<<"Cari Nama Event : "; cin>>namaEvent;
+                    cout << "Cari Nama Event : "; cin >> namaEvent;
                     adr_Event P = cariEvent(LE, namaEvent);
-                    if(P == NULL){
-                        cout<<"Tidak ada event bernama "<<namaEvent<<" "<<endl;
+                    if (P == nil) {
+                        cout << "Tidak ada event bernama " << namaEvent << " " << endl;
                         system("pause");
                         system("CLS");
                         menuEvent(LE, LR);
-                    }else{
-                        cout<<"Nama Event : "<<info(P).namaEvent<<endl;
-                        cout<<"Budget Yang dibutuhkan : "<<info(P).butuhBudget<<endl;
-                        cout<<"Budget Kurang : "<<info(P).budgetKurang<<endl;
-                        cout<<"\nApakah anda yakin menghapus data ini ? [y/n] "; cin>>pil;
-                        if(pil == 'y'){
+                    } else {
+                        cout << endl;
+                        cout << "Nama Event : " << info(P).namaEvent << endl;
+                        cout << "Budget Yang dibutuhkan : " << info(P).butuhBudget << endl;
+                        cout << "Budget Kurang : " << info(P).budgetKurang << endl;
+                        cout << "\nApakah anda yakin menghapus data ini ? [y/n] "; cin >> pil;
+                        if (pil == 'y') {
                             adr_Relasi R = first(LR);
-                            while(R != NULL){
-                                if(info(P).namaEvent == info(Event(R)).namaEvent){
+                            while (R != nil) {
+                                if (info(P).namaEvent == info(Event(R)).namaEvent) {
                                     hapusRelasi(LR, R);
                                 }
                                 R = next(R);
                             }
                             hapusEvent(LE, namaEvent, P);
                             system("CLS");
-                            menuEvent(LE,LR);
-                        }else if(pil == 'n'){
+                            menuEvent(LE, LR);
+                        } else if (pil == 'n') {
                             system("CLS");
                             menuEvent(LE,LR);
                         }
                     }
                 }
-        } while((menu=='1')||(menu=='2')&&(menu=='3'));
+        } while ((menu == '1') || (menu == '2') && (menu == '3'));
     }
 }
 
