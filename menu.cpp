@@ -30,8 +30,8 @@ void mainMenu(ListEvent LE, ListSponsor LS, ListRelasi LR)
 
 void menuEvent(ListEvent &LE, ListRelasi &LR)
 {
-    char menu;
-    while (menu != '3') {
+    int menu;
+    while (menu != 3) {
         do {
             system("cls");
             spasi(120, "=====================================\n");
@@ -53,10 +53,10 @@ void menuEvent(ListEvent &LE, ListRelasi &LR)
             cout << endl;
             spasi(34, "Pilih Menu : ");
                 cin >> menu;
-                if (menu == '1') {
+                if (menu == 1) {
                     system("CLS");
                     tambahEvent(LE);
-                } else if (menu == '2') {
+                } else if (menu == 2) {
                     system("CLS");
                     string namaEvent;
                     char pil;
@@ -66,6 +66,7 @@ void menuEvent(ListEvent &LE, ListRelasi &LR)
                         cout << "Tidak ada event bernama " << namaEvent << " " << endl;
                         system("pause");
                         system("CLS");
+                        menu = 3;
                         menuEvent(LE, LR);
                     } else {
                         cout << endl;
@@ -83,14 +84,16 @@ void menuEvent(ListEvent &LE, ListRelasi &LR)
                             }
                             hapusEvent(LE, namaEvent, P);
                             system("CLS");
+                            menu = 3;
                             menuEvent(LE, LR);
                         } else if (pil == 'n') {
                             system("CLS");
-                            menuEvent(LE,LR);
+                            menu = 3;
+                            menuEvent(LE, LR);
                         }
                     }
                 }
-        } while ((menu == '1') || (menu == '2') && (menu == '3'));
+        } while (menu == 1 || menu == 2);
     }
 }
 

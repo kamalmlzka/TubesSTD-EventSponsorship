@@ -162,16 +162,16 @@ void showEvent(ListEvent &L)
     int i = 1;
 
     if (isEmptyListEvent(L) == true) {
-        cout<<" "<<setiosflags(ios::right)<<setw(12)<< "nil";
-        cout<<" "<<setiosflags(ios::right)<<setw(21)<< "Event Kosong";
+        cout << " " << setiosflags(ios::right) << setw(12) << "nil";
+        cout << " " << setiosflags(ios::right) << setw(21) << "Event Kosong";
     } else {
         do {
-            cout<<" "<<setiosflags(ios::right)<<setw(7);
-            cout<<" "<<setiosflags(ios::left)<<setw(4)<< i++;
-            cout<<" "<<setiosflags(ios::left)<<setw(20)<< info(P).namaEvent;
-            cout<<" "<<setiosflags(ios::left)<<setw(24)<< info(P).butuhBudget;
-            cout<<" "<<setiosflags(ios::left)<<setw(25)<< info(P).budgetKurang;
-            cout<<" "<<setiosflags(ios::left)<<setw(27)<< info(P).budgetLebih << endl;
+            cout << " " << setiosflags(ios::right) << setw(7);
+            cout << " " << setiosflags(ios::left) << setw(4) << i++;
+            cout << " " << setiosflags(ios::left) << setw(20) << info(P).namaEvent;
+            cout << " " << setiosflags(ios::left) << setw(24) << info(P).butuhBudget;
+            cout << " " << setiosflags(ios::left) << setw(25) << info(P).budgetKurang;
+            cout << " " << setiosflags(ios::left) << setw(27) << info(P).budgetLebih << endl;
             P = next(P);
         } while(P != first(L));
     }
