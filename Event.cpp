@@ -1,4 +1,5 @@
 #include "Event.h"
+#include "menu.h"
 
 void createListEvent(ListEvent &L)
 {
@@ -161,15 +162,16 @@ void showEvent(ListEvent &L)
     int i = 1;
 
     if (isEmptyListEvent(L) == true) {
-        cout << "Event Kosong" << endl;
+        cout << "                      Event Kosong" << endl;
     } else {
-        while (P != nil) {
-            cout << " " << i++;
-            cout << " " << info(P).namaEvent;
-            cout << " " << info(P).butuhBudget;
-            cout << " " << info(P).budgetKurang;
-            cout << " " << info(P).budgetLebih << endl;
-        }
+        do {
+            cout << "           " << i++;
+            cout << "           " << info(P).namaEvent;
+            cout << "           " << info(P).butuhBudget;
+            cout << "           " << info(P).budgetKurang;
+            cout << "           " << info(P).budgetLebih << endl;
+            P = next(P);
+        } while(P != first(L));
     }
 }
 

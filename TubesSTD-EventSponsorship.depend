@@ -1,10 +1,14 @@
 # depslib dependency file v1.0
-1672137344 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\main.cpp
+1672386003 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\main.cpp
 	<iostream>
 	"Event.h"
+	"Sponsor.h"
+	"relasi.h"
+	"menu.h"
 
-1672343447 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\event.cpp
+1672391463 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\event.cpp
 	"Event.h"
+	"menu.h"
 
 1672343530 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\event.h
 	<iostream>
@@ -23,11 +27,19 @@
 	<cstdlib>
 	<iomanip>
 
-1672343625 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\relasi.cpp
+1672384324 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\relasi.cpp
 	"relasi.h"
 
-1672343530 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\relasi.h
+1672383400 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\relasi.h
 	"Event.h"
 	"Sponsor.h"
 	<iostream>
+
+1672391423 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\menu.h
+	"Event.h"
+	"Sponsor.h"
+	"relasi.h"
+
+1672389285 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\menu.cpp
+	"menu.h"
 
