@@ -40,7 +40,7 @@ adr_Relasi newRelasi(adr_Event E, adr_Sponsor S, infotypeR x);
 void delRelasi(adr_Relasi &P);
 void insertFirstRelasi(ListRelasi &L, adr_Relasi P);
 void insertLastRelasi(ListRelasi &L, adr_Relasi P);
-void inserAfterEvent(adr_Relasi Prec, adr_Relasi P);
+void inserAfterRelasi(ListRelasi &L, adr_Relasi Prec, adr_Relasi P);
 void deleteFirstRelasi(ListRelasi &L, adr_Relasi &P);
 void deleteLastRelasi(ListRelasi &L, adr_Relasi &P);
 void deleteAfterRelasi(ListRelasi &L, adr_Relasi Prec, adr_Relasi &P);
