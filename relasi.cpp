@@ -143,14 +143,28 @@ void showRelasi(ListRelasi L)
     adr_Relasi Q = first(L);
     long budget = info(Event(Q)).butuhBudget - info(Q).budgetDukungan;
     while (Q != nil) {
-        cout<<info(Event(Q)).namaEvent<<"\n";
-        cout<<info(Sponsor(Q)).namaSponsor<<"\n";
-        cout<<info(Q).dukungan<<"\n";
-        cout<<budget<<"\n";
+        cout << info(Event(Q)).namaEvent << "\n";
+        cout << info(Sponsor(Q)).namaSponsor << "\n";
+        cout << info(Q).dukungan << "\n";
+        cout << budget << "\n";
     }
 }
 
 void hapusRelasi(ListRelasi &L, adr_Relasi &P)
 {
-
+    if (P == nil) {
+        cout << "List Kosong";
+    } else {
+        if (first(L) == P) {
+            deleteFirstRelasi(L, P);
+        } else if (next(P) == nil) {
+            deleteLastRelasi(L, P);
+        } else {
+            adr_Relasi Prec = first(L);
+            while(next(Prec) != P){
+                Prec = next(Prec);
+            }
+            deleteAfterRelasi(L, P, Prec);
+        }
+    }
 }
