@@ -20,8 +20,8 @@ Event Sponsorship
   - Sisa Budget
   
 - Dukungan (Relasi)
-  - Dukungan Dana
   - Jenis Dukungan
+  - Dana Dukungan
   
 ## Panduan Soal Tubes
 https://docs.google.com/document/d/1OEvaAxyjdSEeb_cIbcroJVtnmo9i-6ktWSK0ThSEZ7U/edit
