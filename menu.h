@@ -9,7 +9,6 @@ void mainMenu(ListEvent LE, ListSponsor LS, ListRelasi LR);
 void menuEvent(ListEvent &LE, ListRelasi &LR);
 void menuSponsor(ListSponsor &LS, ListRelasi &LR);
 void menuRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR);
-
 void spasi(int jum, char* kata);
 
 #endif // MENU_H_INCLUDED

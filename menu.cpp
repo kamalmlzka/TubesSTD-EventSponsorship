@@ -104,12 +104,12 @@ void menuSponsor(ListSponsor &LS, ListRelasi &LR)
         do {
             system("cls");
             spasi(120, "=====================================\n");
-            spasi(122, "MENU SPONSOR\n");
+            spasi(122, "DAFTAR SPONSOR\n");
             spasi(120, "=====================================\n");
             cout << endl;
             spasi(25, "No. ");
-            spasi(35, "Nama Sponsor ");
-            spasi(45, "Budget Sponsor ");
+            spasi(31, "Nama Sponsor ");
+            spasi(49, "Budget Sponsor ");
             spasi(55, "Sisa Budget ");
             cout << endl;
             showSponsor(LS);
@@ -167,7 +167,44 @@ void menuSponsor(ListSponsor &LS, ListRelasi &LR)
 
 void menuRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR)
 {
-
+    int menu = 0;
+    char level; string namaEvent,namaSponsor;
+    while (menu != 3) {
+        do {
+            system("cls");
+            spasi(120, "=====================================\n");
+            spasi(122, "DAFTAR EVENT\n");
+            spasi(120, "=====================================\n");
+            cout << endl;
+            spasi(25, "No. ");
+            spasi(30, "Nama Event ");
+            spasi(35, "Dana dibutuhkan ");
+            spasi(40, "Dana Kurang ");
+            spasi(45, "Dana Lebih ");
+            cout << endl;
+            showEvent(LE);
+            cout << endl;
+            cout << endl;
+            spasi(120, "=====================================\n");
+            spasi(122, "DAFTAR SPONSOR\n");
+            spasi(120, "=====================================\n");
+            cout << endl;
+            spasi(25, "No. ");
+            spasi(31, "Nama Sponsor ");
+            spasi(49, "Budget Sponsor ");
+            spasi(55, "Sisa Budget ");
+            cout << endl;
+            showSponsor(LS);
+            cout << endl;
+            cout << endl;
+            cout << endl;
+            spasi(40, "1. Tambah Relasi \n");
+            spasi(43, "2. List Sponsorship \n");
+            spasi(35, "3. Kembali \n");
+            cout << endl;
+            spasi(34, "Pilih Menu : "); cin >> menu;
+        } while (menu == 1 || menu == 2);
+    }
 }
 
 void spasi(int jum, char* kata){

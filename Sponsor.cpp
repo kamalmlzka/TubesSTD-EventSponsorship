@@ -142,8 +142,8 @@ void showSponsor(ListSponsor &L)
     while (P != nil) {
         cout << " " << setiosflags(ios::right) << setw(7);
         cout << " " << setiosflags(ios::left) << setw(4) << i++;
-        cout << " " << setiosflags(ios::left) << setw(24) << info(P).namaSponsor;
-        cout << " " << setiosflags(ios::left) << setw(29) << info(P).budget;
+        cout << " " << setiosflags(ios::left) << setw(22) << info(P).namaSponsor;
+        cout << " " << setiosflags(ios::left) << setw(31) << info(P).budget;
         cout << " " << setiosflags(ios::left) << setw(32) << info(P).sisaBudget << endl;
         P = next(P);
     }
