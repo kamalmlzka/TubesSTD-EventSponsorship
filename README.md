@@ -20,7 +20,7 @@ Event Sponsorship
   - Sisa Budget
   
 - Level Sponsorship (Relasi)
-  - Level Sponsorship (Platinum, Gold, Silver)
+  - Level Sponsorship (Gold, Silver, Bronze, etc.)
   - Dana Sponsorship
   
 ## Panduan Soal Tubes
