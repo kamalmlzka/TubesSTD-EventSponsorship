@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1672386003 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\main.cpp
+1672470617 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\main.cpp
 	<iostream>
 	"Event.h"
 	"Sponsor.h"
 	"relasi.h"
 	"menu.h"
 
-1672414731 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\event.cpp
+1672471309 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\event.cpp
 	"Event.h"
 	"menu.h"
 
@@ -17,29 +17,29 @@
 	<iomanip>
 	<string>
 
-1672343451 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\sponsor.cpp
+1672471770 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\sponsor.cpp
 	"Sponsor.h"
 
-1672343437 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\sponsor.h
+1672469768 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\sponsor.h
 	<iostream>
 	<string.h>
 	<fstream>
 	<cstdlib>
 	<iomanip>
 
-1672384324 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\relasi.cpp
+1672472460 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\relasi.cpp
 	"relasi.h"
 
-1672383400 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\relasi.h
+1672472411 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\relasi.h
 	"Event.h"
 	"Sponsor.h"
 	<iostream>
 
-1672391423 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\menu.h
+1672472432 d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\menu.h
 	"Event.h"
 	"Sponsor.h"
 	"relasi.h"
 
-1672417058 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\menu.cpp
+1672472190 source:d:\users\maca\documents\matkul\semester 3\struktur data\tubesstd-eventsponsorship\menu.cpp
 	"menu.h"
 

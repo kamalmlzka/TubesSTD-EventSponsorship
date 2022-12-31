@@ -141,13 +141,18 @@ adr_Relasi cariRelasi(ListRelasi L, adr_Event E, adr_Sponsor S)
 void showRelasi(ListRelasi L)
 {
     adr_Relasi Q = first(L);
-    long budget = info(Event(Q)).butuhBudget - info(Q).budgetDukungan;
+    long budget = info(Event(Q)).butuhBudget - info(Q).danaSponsorship;
     while (Q != nil) {
         cout << info(Event(Q)).namaEvent << "\n";
         cout << info(Sponsor(Q)).namaSponsor << "\n";
-        cout << info(Q).dukungan << "\n";
+        cout << info(Q).jenisSponsorship << "\n";
         cout << budget << "\n";
     }
+}
+
+void tambahRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR, adr_Event E, adr_Sponsor S, string grade, int persen)
+{
+
 }
 
 void hapusRelasi(ListRelasi &L, adr_Relasi &P)

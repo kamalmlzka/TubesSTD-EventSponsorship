@@ -2,7 +2,7 @@
 
 void mainMenu(ListEvent LE, ListSponsor LS, ListRelasi LR)
 {
-    int pilihan;
+    int menu;
     do {
         system("cls");
         cout << "||========================================================||" << endl;
@@ -13,19 +13,19 @@ void mainMenu(ListEvent LE, ListSponsor LS, ListRelasi LR)
         cout << "||========================================================||" << endl;
         cout << endl;
         cout << "  MENU" << endl << endl;
-        cout << "  1. Event" << endl;
-        cout << "  2. Sponsor" << endl;
-        cout << "  3. Daftar kerjasama" << endl;
-        cout << "  4. keluar" << endl << endl;
-        cout << "  Masukan pilihan : "; cin>>pilihan;
+        cout << "  1. Event (Parent)" << endl;
+        cout << "  2. Sponsor (Child)" << endl;
+        cout << "  3. Level Sponsorship (relasi)" << endl;
+        cout << "  4. Exit" << endl << endl;
+        cout << "  Masukan menu : "; cin >> menu;
 
-        switch(pilihan) {
+        switch(menu) {
             case 1 : menuEvent(LE, LR); break;
             case 2 : menuSponsor(LS, LR); break;
             case 3 : menuRelasi(LE, LS, LR); break;
             case 4 : exit(0); break;
         }
-    } while (pilihan != 1 || pilihan != 2);
+    } while (menu != 1 || menu != 2);
 }
 
 void menuEvent(ListEvent &LE, ListRelasi &LR)
@@ -99,15 +99,73 @@ void menuEvent(ListEvent &LE, ListRelasi &LR)
 
 void menuSponsor(ListSponsor &LS, ListRelasi &LR)
 {
+    int menu = 0;
+    while (menu != 3) {
+        do {
+            system("cls");
+            spasi(120, "=====================================\n");
+            spasi(122, "MENU SPONSOR\n");
+            spasi(120, "=====================================\n");
+            cout << endl;
+            spasi(25, "No. ");
+            spasi(35, "Nama Sponsor ");
+            spasi(45, "Budget Sponsor ");
+            spasi(55, "Sisa Budget ");
+            cout << endl;
+            showSponsor(LS);
+            cout << endl;
+            cout << endl;
+            spasi(40, "1. Tambah Sponsor \n");
+            spasi(38, "2. Hapus Sponsor \n");
+            spasi(33, "3. Kembali \n");
+            cout << endl;
+            spasi(34, "Pilih Menu : "); cin >> menu;
 
+            if (menu == 1) {
+                system("CLS");
+                tambahSponsor(LS);
+            } else if (menu == 2) {
+                system("CLS");
+                string namaSponsor;
+                char pil;
+                cout << "Cari Nama Sponsor : "; cin >> namaSponsor;
+                adr_Sponsor P = cariSponsor(LS, namaSponsor);
+                if (P == nil) {
+                    cout << "Tidak Ditemukan\n";
+                    system("pause");
+                    system("CLS");
+                    menu = 3;
+                    menuSponsor(LS, LR);
+                } else {
+                    cout << "Nama Sponsor : " << info(P).namaSponsor << endl;
+                    cout << "Budget Awal : " << info(P).budget << endl;
+                    cout << "Sisa Budget : " << info(P).sisaBudget << endl;
+                    cout << "\nApakah anda yakin menghapus data ini ? [y/n] "; cin >> pil;
+                    if (pil == 'y') {
+                        adr_Relasi R = first(LR);
+                        while (R != nil) {
+                            if (info(P).namaSponsor == info(Sponsor(R)).namaSponsor) {
+                                hapusRelasi(LR, R);
+                            }
+                            R = next(R);
+                        }
+
+                        hapusSponsor(LS, namaSponsor, P);
+                        system("CLS");
+                        menu = 3;
+                        menuSponsor(LS, LR);
+                    } else if (pil == 'n') {
+                        system("CLS");
+                        menu = 3;
+                        menuSponsor(LS, LR);
+                    }
+                }
+            }
+        } while (menu == 1 || menu == 2);
+    }
 }
 
 void menuRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR)
-{
-
-}
-
-void execData(ListEvent &LE, ListSponsor &LS, ListRelasi &LR, adr_Event E, adr_Sponsor S, string grade, int persen)
 {
 
 }

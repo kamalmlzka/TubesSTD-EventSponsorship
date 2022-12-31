@@ -15,7 +15,7 @@ int main()
     createListSponsor(LS);
     createListRelasi(LR);
 
-    mainMenu(LE,LS,LR);
+    mainMenu(LE, LS, LR);
 
     return 0;
 }

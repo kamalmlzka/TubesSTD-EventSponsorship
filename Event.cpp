@@ -163,7 +163,7 @@ void showEvent(ListEvent &L)
 
     if (isEmptyListEvent(L) == true) {
         cout << " " << setiosflags(ios::right) << setw(12) << "nil";
-        cout << " " << setiosflags(ios::right) << setw(21) << "Event Kosong";
+        cout << " " << setiosflags(ios::left) << setw(21) << "Event Kosong";
     } else {
         do {
             cout << " " << setiosflags(ios::right) << setw(7);

@@ -136,13 +136,15 @@ void showSponsor(ListSponsor &L)
     P = first(L);
 
     if (P == nil) {
-        cout << "List Kosong" << endl;
+        cout << " " << setiosflags(ios::right) << setw(12) << "nil";
+        cout << " " << setiosflags(ios::left) << setw(25) << "Sponsor Kosong";
     }
     while (P != nil) {
-        cout << " " << i++;
-        cout << " " << info(P).namaSponsor;
-        cout << " " << info(P).budget;
-        cout << " " << info(P).sisaBudget << endl;
+        cout << " " << setiosflags(ios::right) << setw(7);
+        cout << " " << setiosflags(ios::left) << setw(4) << i++;
+        cout << " " << setiosflags(ios::left) << setw(24) << info(P).namaSponsor;
+        cout << " " << setiosflags(ios::left) << setw(29) << info(P).budget;
+        cout << " " << setiosflags(ios::left) << setw(32) << info(P).sisaBudget << endl;
         P = next(P);
     }
 }
@@ -150,19 +152,23 @@ void showSponsor(ListSponsor &L)
 void tambahSponsor(ListSponsor &L)
 {
     int menu = 0;
-    sponsor spons;
-    do {
-        system("CLS");
-        cin.ignore();
-        cout << "Nama Sponsor : "; getline(cin, spons.namaSponsor);
-        cout << "Budget : "; cin >> spons.budget;
-        spons.sisaBudget = spons.budget;
-        spons.counter = 0;
-        insertFirstSponsor(L, newSponsor(spons));
-        cout << "1.Tambah Data Sponsor Lagi\n";
-        cout << "2.Kembali\n";
-        cout << "Pilih Menu : "; cin >> menu;
-    } while (menu == 1);
+    sponsor sponsorBaru;
+
+    while (menu != 2) {
+        do {
+            system("CLS");
+            cin.ignore();
+            cout << "Nama Sponsor : "; getline(cin, sponsorBaru.namaSponsor);
+            cout << "Budget : "; cin >> sponsorBaru.budget;
+            sponsorBaru.sisaBudget = sponsorBaru.budget;
+            sponsorBaru.counter = 0;
+
+            insertFirstSponsor(L, newSponsor(sponsorBaru));
+            cout << "1.Tambah Data Sponsor Lagi\n";
+            cout << "2.Kembali\n";
+            cout << "Pilih Menu : "; cin >> menu;
+        } while (menu == 1);
+    }
 }
 
 void hapusSponsor(ListSponsor &L, string namaSponsor, adr_Sponsor &P)
