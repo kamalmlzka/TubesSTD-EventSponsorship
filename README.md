@@ -1,5 +1,5 @@
 # TubesSTD-EventSponsorship
-#### Tugas Besar Mata Kuliah Struktur Data
+#### Tugas Besar Mata Kuliah Struktur Data [SFT]
 
 # Anggota Kelompok 7
 - Kamal Maulaazka Sidhqi (1302210032)
