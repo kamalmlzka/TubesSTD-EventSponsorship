@@ -19,9 +19,9 @@ Event Sponsorship
   - Budget Sponsor
   - Sisa Budget
   
-- Dukungan (Relasi)
-  - Jenis Dukungan
-  - Dana Dukungan
+- Level Sponsorship (Relasi)
+  - Level Sponsorship (Platinum, Gold, Silver)
+  - Dana Sponsorship
   
 ## Panduan Soal Tubes
 https://docs.google.com/document/d/1OEvaAxyjdSEeb_cIbcroJVtnmo9i-6ktWSK0ThSEZ7U/edit
