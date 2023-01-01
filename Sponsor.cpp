@@ -143,8 +143,8 @@ void showSponsor(ListSponsor &L)
         cout << " " << setiosflags(ios::right) << setw(7);
         cout << " " << setiosflags(ios::left) << setw(4) << i++;
         cout << " " << setiosflags(ios::left) << setw(22) << info(P).namaSponsor;
-        cout << " " << setiosflags(ios::left) << setw(31) << info(P).budget;
-        cout << " " << setiosflags(ios::left) << setw(32) << info(P).sisaBudget << endl;
+        cout << " " << setiosflags(ios::left) << setw(26) << info(P).budget << " juta";
+        cout << " " << setiosflags(ios::left) << setw(27) << info(P).sisaBudget << " juta" << endl;
         P = next(P);
     }
 }

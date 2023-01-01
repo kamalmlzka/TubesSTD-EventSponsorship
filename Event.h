@@ -1,5 +1,5 @@
-#ifndef EVENTLIB_H_INCLUDED
-#define EVENTLIB_H_INCLUDED
+#ifndef EVENT_H_INCLUDED
+#define EVENT_H_INCLUDED
 
 #include <iostream>
 #include <fstream>
@@ -51,4 +51,4 @@ void showEvent(ListEvent &L);
 void tambahEvent(ListEvent &L);
 void hapusEvent(ListEvent &L, string namaEvent, adr_Event &P);
 
-#endif // EVENTLIB_H_INCLUDED
+#endif // EVENT_H_INCLUDED

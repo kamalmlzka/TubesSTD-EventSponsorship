@@ -16,7 +16,7 @@ using namespace std;
 
 struct sponsor {
     string namaSponsor;
-    long budget, sisaBudget;
+    int budget, sisaBudget;
     int counter;
 };
 
