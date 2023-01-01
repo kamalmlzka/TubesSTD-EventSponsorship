@@ -150,7 +150,7 @@ void showRelasi(ListRelasi L)
     }
 }
 
-void tambahRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR, adr_Event E, adr_Sponsor S, string grade, int persen)
+void tambahRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR, adr_Event E, adr_Sponsor S, string level, int persen)
 {
 
 }

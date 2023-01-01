@@ -16,7 +16,7 @@
 using namespace std;
 
 struct relasi {
-    string jenisSponsorship;
+    string level;
     int danaSponsorship;
 };
 
@@ -46,7 +46,7 @@ void deleteLastRelasi(ListRelasi &L, adr_Relasi &P);
 void deleteAfterRelasi(ListRelasi &L, adr_Relasi Prec, adr_Relasi &P);
 adr_Relasi cariRelasi(ListRelasi L, adr_Event E, adr_Sponsor S);
 void showRelasi(ListRelasi L);
-void tambahRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR, adr_Event E, adr_Sponsor S, string grade, int persen);
+void tambahRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR, adr_Event E, adr_Sponsor S, string level, int persen);
 void hapusRelasi(ListRelasi &L, adr_Relasi &P);
 
 #endif // RELASI_H_INCLUDED
