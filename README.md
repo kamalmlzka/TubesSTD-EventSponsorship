@@ -11,8 +11,7 @@ Event Sponsorship
 ### Bentuk III-A (relasi M-N)
 (Level: ★★★)<br>
 
-(https://raw.githubusercontent.com/kamalmlzka/TubesSTD-EventSponsorship/main/Bentuk%20III%20M%20-%20N.png)<br>
-
+![01](https://raw.githubusercontent.com/kamalmlzka/TubesSTD-EventSponsorship/main/Bentuk%20III%20M%20-%20N.png)<br>
 
 - Event (Parent)
   - Nama Event
@@ -31,3 +30,6 @@ Event Sponsorship
   
 ## Panduan Soal Tubes
 https://docs.google.com/document/d/1OEvaAxyjdSEeb_cIbcroJVtnmo9i-6ktWSK0ThSEZ7U/edit
+
+
+[def]: https://github.com/kamalmlzka/TubesSTD-EventSponsorship/blob/main/Bentuk%20III%20M%20-%20N.png
