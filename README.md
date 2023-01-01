@@ -8,6 +8,12 @@
 ## Studi Kasus
 Event Sponsorship
 
+### Bentuk III-A (relasi M-N)
+(Level: ★★★)<br>
+
+(https://raw.githubusercontent.com/kamalmlzka/TubesSTD-EventSponsorship/main/Bentuk%20III%20M%20-%20N.png)<br>
+
+
 - Event (Parent)
   - Nama Event
   - Budget dibutuhkan
