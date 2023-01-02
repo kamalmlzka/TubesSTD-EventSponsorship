@@ -171,7 +171,7 @@ void showEvent(ListEvent &L)
             cout << " " << setiosflags(ios::left) << setw(20) << info(P).namaEvent;
             cout << " " << setiosflags(ios::left) << setw(19) << info(P).butuhBudget << " juta";
             cout << " " << setiosflags(ios::left) << setw(20) << info(P).budgetKurang << " juta";
-            cout << " " << setiosflags(ios::left) << setw(27) << info(P).budgetLebih << "" << endl;
+            cout << " " << setiosflags(ios::left) << setw(22) << info(P).budgetLebih << " juta" << endl;
             P = next(P);
         } while(P != first(L));
     }

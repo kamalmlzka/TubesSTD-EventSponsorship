@@ -161,10 +161,10 @@ void tambahRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR, adr_Event E, a
         int budgetSponsor = info(S).budget;
         if (info(S).counter == 0) {
             info(S).sisaBudget = budgetSponsor - relasiBaru.danaSponsorship;
-            info(S).counter = info(S).counter+1;
+            info(S).counter = info(S).counter + 1;
         } else if (info(S).counter >= 1) {
             info(S).sisaBudget = info(S).sisaBudget - relasiBaru.danaSponsorship;
-            info(S).counter = info(S).counter+1;
+            info(S).counter = info(S).counter + 1;
         }
         if (info(E).counter == 0) {
             if (info(E).budgetKurang <= 0) {

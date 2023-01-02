@@ -203,7 +203,7 @@ void menuRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR)
             spasi(35, "3. Kembali \n");
             cout << endl;
             spasi(34, "Pilih Menu : "); cin >> menu;
-            if(menu == 1){
+            if (menu == 1) {
                 int pilihLevel;
                 system("cls");
                 adr_Sponsor C;
@@ -213,24 +213,24 @@ void menuRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR)
                 adr_Event E = first(LE);
                 cin.ignore();
 
-                if(E != nil){
+                if (E != nil) {
                     cout << "Nama Event\n";
-                    do{
+                    do {
                         cout << info(E).namaEvent << endl;
                         E = next(E);
-                    }while(E != first(LE));
+                    } while (E != first(LE));
                     cout << endl;
-                    cout << "Masukan Nama Event Yang Akan Didukung : "; getline(cin,namaEvent);
+                    cout << "Masukan Nama Event Yang Akan Didukung : "; getline(cin, namaEvent);
                     adr_Event P = cariEvent(LE,namaEvent);
-                    if(P == nil){
-                        cout << "Event tidak ditemukan";
+                    if (P == nil) {
+                        cout << "Event tidak ditemukan" << endl;
                         system("pause");
                     }
-                    if(P != nil){
+                    if (P != nil) {
                         system("cls");
                         cout << "Nama Event : " << info(P).namaEvent << endl;
                         cout << "Dana Yang Dibutuhkan : " << info(P).butuhBudget << " juta" << endl;
-                        cout << "Dana Lebih : " << info(P).budgetLebih << endl;
+                        cout << "Dana Lebih : " << info(P).budgetLebih << " juta" << endl;
                         cout << "Level Sponsorship : \n";
                         cout << "1.Grand-Master = 100%\n";
                         cout << "2.Master = 65%\n";
@@ -241,55 +241,56 @@ void menuRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR)
                         cout << "7.Bronze = 5%\n";
                         cout << "Pilih Level Sponsorship : "; cin >> pilihLevel;
                         cout << "Masukan nama sponsor anda : "; cin >> namaSponsor;
-                        C = cariSponsor(LS,namaSponsor);
-                        if(C == nil){
+                        C = cariSponsor(LS, namaSponsor);
+                        if (C == nil) {
                             cout << "Sponsor tidak ditemukan !!\n";
                             system("pause");
-                        }else{
-                            if(pilihLevel == 1&&C!=nil){
-                                tambahRelasi(LE,LS,LR,P,C,"Grand-Master",100);
-                            }else if(pilihLevel == 2&&C!=nil){
-                                tambahRelasi(LE,LS,LR,P,C,"Master",65);
-                            }else if(pilihLevel == 3&&C!=nil){
-                                tambahRelasi(LE,LS,LR,P,C,"Diamond",50);
-                            }else if(pilihLevel == 4&&C!=nil){
-                                tambahRelasi(LE,LS,LR,P,C,"Platinum",25);
-                            }else if(pilihLevel == 5&&C!=nil){
-                                tambahRelasi(LE,LS,LR,P,C,"Gold",15);
-                            }else if(pilihLevel == 6&&C!=nil){
-                                tambahRelasi(LE,LS,LR,P,C,"Silver",10);
-                            }else if(pilihLevel == 7&&C!=nil){
-                                tambahRelasi(LE,LS,LR,P,C,"Bronze",5);
+                        } else {
+                            if (pilihLevel == 1&&C!=nil) {
+                                tambahRelasi(LE, LS, LR, P, C, "Grand-Master", 100);
+                            } else if (pilihLevel == 2&&C!=nil) {
+                                tambahRelasi(LE, LS, LR, P, C, "Master", 65);
+                            } else if (pilihLevel == 3&&C!=nil) {
+                                tambahRelasi(LE, LS, LR, P, C, "Diamond", 50);
+                            } else if (pilihLevel == 4&&C!=nil) {
+                                tambahRelasi(LE, LS, LR, P, C, "Platinum", 25);
+                            } else if (pilihLevel == 5&&C!=nil) {
+                                tambahRelasi(LE, LS, LR, P, C, "Gold", 15);
+                            } else if (pilihLevel == 6&&C!=nil) {
+                                tambahRelasi(LE, LS, LR, P, C, "Silver", 10);
+                            } else if (pilihLevel == 7&&C!=nil) {
+                                tambahRelasi(LE, LS, LR, P, C, "Bronze", 5);
                             }
                         }
                     }
-                }else{
+                } else {
                     cout << "Silahkan tambah event & sponsor terlebih dahulu\n";
                     system("pause");
                 }
-            }else if(menu == 2){
+            } else if (menu == 2) {
                 system("cls");
                 int i = 1;
-                cout << "Masukan Nama Sponsor : "; cin >> namaSponsor;
-                adr_Sponsor C = cariSponsor(LS,namaSponsor);
+                cin.ignore();
+                cout << "Masukan Nama Event : "; getline(cin, namaEvent);
+                adr_Event P = cariEvent(LE, namaEvent);
                 adr_Relasi R = first(LR);
 
-                if(R != nil && C != nil){
+                if (R != nil && P != nil) {
                     system("cls");
                     spasi(120, "=====================================\n");
-                    spasi(115, "DAFTAR SPONSORSHIP "); cout << namaSponsor << endl;
+                    spasi(115, "DAFTAR SPONSORSHIP "); cout << namaEvent << endl;
                     spasi(120, "=====================================\n");
                     cout << endl;
-                    spasi(60,"No. ");
-                    spasi(15,"Nama Event ");
-                    spasi(25,"Level Sponsorship");
-                    spasi(35,"Dana Sponsorship ");
+                    spasi(60, "No. ");
+                    spasi(15, "Nama Sponsor ");
+                    spasi(25, "Level Sponsorship");
+                    spasi(35, "Dana Sponsorship ");
                     cout << endl;
-                    while(R != nil){
-                        if(info(Sponsor(R)).namaSponsor == namaSponsor){
+                    while (R != nil) {
+                        if (info(Event(R)).namaEvent == namaEvent) {
                             cout << " " << setiosflags(ios::right) << setw(0);
                             cout << " " << setiosflags(ios::left) << setw(28) << i++;
-                            cout << " " << setiosflags(ios::left) << setw(13) << info(Event(R)).namaEvent;
+                            cout << " " << setiosflags(ios::left) << setw(14) << info(Sponsor(R)).namaSponsor;
                             cout << " " << setiosflags(ios::left) << setw(21) << info(R).level;
                             cout << " " << setiosflags(ios::left) << setw(19) << info(R).danaSponsorship << " juta" << endl;
                         }
@@ -300,29 +301,25 @@ void menuRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR)
                     spasi(36, "2. Kembali\n");
                     cout << endl;
                     spasi(34, "Pilih Menu : "); cin >> menu;
-                    if(menu == 1){
-                        cin.ignore();
-                        cout << "Masukan Nama Event : "; getline(cin,namaEvent);;
-                        adr_Event P = cariEvent(LE,namaEvent);
-                        adr_Relasi Q = cariRelasi(LR,P,C);
-                        if(Q != nil){
-                            info(C).sisaBudget = info(C).sisaBudget+info(Q).danaSponsorship;
-                            info(P).budgetKurang = info(P).budgetKurang+info(Q).danaSponsorship;
-                            if(info(P).budgetLebih > 0){
-                                info(P).budgetLebih = info(P).budgetLebih-info(Q).danaSponsorship;
+                    if (menu == 1) {
+                        cout << "Masukan Nama Sponsor : "; cin >> namaSponsor;
+                        adr_Sponsor C = cariSponsor(LS, namaSponsor);
+                        adr_Relasi Q = cariRelasi(LR, P, C);
+                        if (Q != nil) {
+                            info(C).sisaBudget = info(C).sisaBudget + info(Q).danaSponsorship;
+                            info(P).budgetKurang = info(P).budgetKurang + info(Q).danaSponsorship;
+                            if (info(P).budgetLebih > 0) {
+                                info(P).budgetLebih = info(P).budgetLebih - info(Q).danaSponsorship;
                             }
-                            if(next(Q) == nil){
-                                cout << "\n";
-                            }else{
-                                cout << info(Event(next(Q))).namaEvent;
-                            }
-                            hapusRelasi(LR,Q);
-                            cout << "Berhasil\n";
-                        }else{
+                            cout << "\n";
+                            hapusRelasi(LR, Q);
+                            cout << "Sponsor " << info(C).namaSponsor << " batal mendukung Event " << namaEvent << endl;
+                            system("pause");
+                        } else {
                             cout << "Tidak Ditemukan\n";
                         }
                     }
-                }else{
+                } else {
                     cout << "Tidak ada relasi\n";
                     system("pause");
                 }
