@@ -137,7 +137,7 @@ void showSponsor(ListSponsor &L)
 
     if (P == nil) {
         cout << " " << setiosflags(ios::right) << setw(12) << "nil";
-        cout << " " << setiosflags(ios::left) << setw(25) << "Sponsor Kosong";
+        cout << " " << setiosflags(ios::left) << setw(23) << "Sponsor Kosong";
     }
     while (P != nil) {
         cout << " " << setiosflags(ios::right) << setw(7);
@@ -158,8 +158,8 @@ void tambahSponsor(ListSponsor &L)
         do {
             system("CLS");
             cin.ignore();
-            cout << "Nama Sponsor : "; getline(cin, sponsorBaru.namaSponsor);
-            cout << "Budget : "; cin >> sponsorBaru.budget;
+            cout << "Nama Sponsor  : "; getline(cin, sponsorBaru.namaSponsor);
+            cout << "Budget (juta) : "; cin >> sponsorBaru.budget;
             sponsorBaru.sisaBudget = sponsorBaru.budget;
             sponsorBaru.counter = 0;
 

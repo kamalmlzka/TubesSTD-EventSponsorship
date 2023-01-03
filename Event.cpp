@@ -187,7 +187,7 @@ void tambahEvent(ListEvent &L)
             system("CLS");
             cin.ignore();
             cout << "Nama Event           : "; getline(cin, eventBaru.namaEvent);
-            cout << "Dana yang dibutuhkan : "; cin >> eventBaru.butuhBudget;
+            cout << "Dana yang dibutuhkan (juta) : "; cin >> eventBaru.butuhBudget;
             eventBaru.budgetKurang = eventBaru.butuhBudget;
             eventBaru.budgetLebih = 0;
             eventBaru.counter = 0;

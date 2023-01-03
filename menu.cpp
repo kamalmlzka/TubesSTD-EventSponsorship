@@ -59,8 +59,8 @@ void menuEvent(ListEvent &LE, ListRelasi &LR)
                 } else if (menu == 2) {
                     system("CLS");
                     string namaEvent;
-                    char pil;
-                    cout << "Cari Nama Event : "; cin >> namaEvent;
+                    char pil; cin.ignore();
+                    cout << "Cari Nama Event : "; getline(cin, namaEvent);
                     adr_Event P = cariEvent(LE, namaEvent);
                     if (P == nil) {
                         cout << "Tidak ada event bernama " << namaEvent << " " << endl;
@@ -69,7 +69,7 @@ void menuEvent(ListEvent &LE, ListRelasi &LR)
                         menu = 3;
                         menuEvent(LE, LR);
                     } else {
-                        cout << endl;
+                        system("cls");
                         cout << "Nama Event : " << info(P).namaEvent << endl;
                         cout << "Budget Yang dibutuhkan : " << info(P).butuhBudget << " juta" << endl;
                         cout << "Budget Kurang : " << info(P).budgetKurang << " juta" << endl;
@@ -127,8 +127,8 @@ void menuSponsor(ListSponsor &LS, ListRelasi &LR)
             } else if (menu == 2) {
                 system("CLS");
                 string namaSponsor;
-                char pil;
-                cout << "Cari Nama Sponsor : "; cin >> namaSponsor;
+                char pil; cin.ignore();
+                cout << "Cari Nama Sponsor : "; getline(cin, namaSponsor);
                 adr_Sponsor P = cariSponsor(LS, namaSponsor);
                 if (P == nil) {
                     cout << "Tidak Ditemukan\n";
@@ -137,6 +137,7 @@ void menuSponsor(ListSponsor &LS, ListRelasi &LR)
                     menu = 3;
                     menuSponsor(LS, LR);
                 } else {
+                    system("cls");
                     cout << "Nama Sponsor : " << info(P).namaSponsor << endl;
                     cout << "Budget Awal : " << info(P).budget  << " juta"<< endl;
                     cout << "Sisa Budget : " << info(P).sisaBudget  << " juta"<< endl;
@@ -240,7 +241,7 @@ void menuRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR)
                         cout << "6.Silver = 10%\n";
                         cout << "7.Bronze = 5%\n";
                         cout << "Pilih Level Sponsorship : "; cin >> pilihLevel;
-                        cout << "Masukan nama sponsor anda : "; cin >> namaSponsor;
+                        cout << "Masukan nama sponsor anda : "; cin.ignore(); getline(cin, namaSponsor);
                         C = cariSponsor(LS, namaSponsor);
                         if (C == nil) {
                             cout << "Sponsor tidak ditemukan !!\n";
@@ -302,7 +303,7 @@ void menuRelasi(ListEvent &LE, ListSponsor &LS, ListRelasi &LR)
                     cout << endl;
                     spasi(34, "Pilih Menu : "); cin >> menu;
                     if (menu == 1) {
-                        cout << "Masukan Nama Sponsor : "; cin >> namaSponsor;
+                        cout << "Masukan Nama Sponsor : "; cin.ignore(); getline(cin, namaSponsor);
                         adr_Sponsor C = cariSponsor(LS, namaSponsor);
                         adr_Relasi Q = cariRelasi(LR, P, C);
                         if (Q != nil) {
