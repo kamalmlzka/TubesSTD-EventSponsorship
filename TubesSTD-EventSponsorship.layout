@@ -2,29 +2,9 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="Sponsor.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4044" topLine="135" />
-		</Cursor>
-	</File>
-	<File name="Sponsor.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="332" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="menu.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="378" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="menu.cpp" open="1" top="1" tabpos="9" split="0" active="1" splitpos="462" zoom_1="5" zoom_2="3">
 		<Cursor>
-			<Cursor1 position="2098" topLine="27" />
-		</Cursor>
-	</File>
-	<File name="relasi.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1413" topLine="13" />
+			<Cursor1 position="12347" topLine="273" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
@@ -32,9 +12,24 @@
 			<Cursor1 position="304" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="Sponsor.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="332" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Sponsor.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4044" topLine="135" />
+		</Cursor>
+	</File>
 	<File name="Event.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="568" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="relasi.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5053" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Event.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
@@ -42,9 +37,14 @@
 			<Cursor1 position="5019" topLine="176" />
 		</Cursor>
 	</File>
-	<File name="relasi.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+	<File name="menu.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5053" topLine="0" />
+			<Cursor1 position="378" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="relasi.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1413" topLine="13" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
